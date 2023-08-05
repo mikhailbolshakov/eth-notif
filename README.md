@@ -1,7 +1,6 @@
 # Description
 
-Test assignment from `Trust Wallet` company
-https://trustwallet.notion.site/Backend-Homework-Tx-Parser-abd431fca950427db75d73d90a0244a8
+Test assignment https://trustwallet.notion.site/Backend-Homework-Tx-Parser-abd431fca950427db75d73d90a0244a8
 
 ## How to install
 ```shell
