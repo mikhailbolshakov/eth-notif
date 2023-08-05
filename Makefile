@@ -28,10 +28,6 @@ lint: check-lint-installed
 	golangci-lint --modules-download-mode vendor run --timeout 5m0s --skip-dirs-use-default ./...
 	go fmt ./...
 
-mock: ## generate mocks for all the directories except root and vendor
-	@rm -R ./mocks 2> /dev/null; \
-	find . -maxdepth 1 -type d \( ! -path ./*vendor ! -name . \) -exec mockery --all --dir {} \;
-
 build: lint vendor ## builds the main
 	@mkdir -p bin
 	go build -o bin/ cmd/main.go
@@ -42,7 +38,6 @@ run: ## run the service
 # Tests commands =======================================================================================================
 
 test: ## run the tests
-	@echo "running tests (skipping stateful)"
 	go test -count=1 ./...
 
 
